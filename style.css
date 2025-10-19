@@ -1,3 +1,12 @@
+:root{
+  --body-color: #085368;
+  --container-color: #e6ecf2;
+  --sidebar-color: #88aabf;
+  --text-color: #ffffff;
+  --background-color: #678ca3;
+  --accent-color: #4e748b;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +15,7 @@
 }
 
 body{
-  background-color: #085368;
+  background-color: var(--body-color);
   color: var(--font-color);
   display: flex;
   justify-content: center;
@@ -15,7 +24,7 @@ body{
 }
 
 .container {
-  background: #e6ecf2;
+  background: var(--container-color);
   display: flex;
   width: 95%;
   border-radius: 10px;
@@ -23,10 +32,9 @@ body{
 }
 
 .sidebar {
-  background: #88aabf;
-  width: 220px;
+  background: var(--sidebar-color);
   padding: 20px 0;
-  color: white;
+  color: var(--text-color);
 }
 
 .logo {
@@ -55,14 +63,15 @@ body{
 
 .sidebar nav a {
   padding: 15px 25px;
-  color: white;
+  width: 200px;
+  color: var(--text-color);
   text-decoration: none;
   font-weight: bold;
 }
 
 .sidebar nav a.active,
 .sidebar nav a:hover {
-  background: #678ca3;
+  background: var(--background-color);
   border-left: 4px solid white;
 }
 
@@ -75,7 +84,7 @@ body{
 .topbar-container {
   width: 100%;
   height: 80px;
-  background: #e6ecf2;
+  background: var(--container-color);
   display: flex;
   flex-direction: column;
   padding: 20px 40px 20px 40px;
@@ -105,7 +114,7 @@ body{
 }
 
 .buttons button {
-  background: #678ca3;
+  background: var(--background-color);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -116,7 +125,7 @@ body{
 }
 
 .buttons button:hover {
-  background: #4e748b;
+  background: var(--accent-color);
 }
 
 .main {
@@ -160,7 +169,7 @@ body{
 }
 
 .appointment-box {
-  background: #f7f9fc;
+  background: var(--container-color);
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 15px;
@@ -168,7 +177,7 @@ body{
 }
 
 .confirm-btn {
-  background: #4e748b;
+  background: var(--accent-color);
   color: white;
   border: none;
   padding: 8px 15px;
@@ -230,24 +239,24 @@ body{
   margin-bottom: 25px;
 }
 
-table {
+.appointment-table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
 }
 
-td {
+.appointment-table td {
   padding: 8px 0;
   border-bottom: 1px solid #e5e5e5;
 }
 
-td:first-child {
+.appointment-table td:first-child {
   font-weight: bold;
   color: #333;
   width: 40%;
 }
 
-td:last-child {
+.appointment-table :last-child {
   color: #555;
   text-align: left;
 }
@@ -270,3 +279,94 @@ td:last-child {
   background-color: #0056b3;
 }
 
+.bills-card-container {
+  margin-top: 20px;
+}
+
+.bills-card-container h2{
+  text-align: left;
+  display: inline-block;
+}
+
+.cards-container {
+  display: flex;
+  gap: 100px;
+}
+
+.cards-container .left-card{
+  display: inline-block;
+  justify-content: left;
+  padding: 0px 20px 20px 20px;
+  font-size: 1.1rem;
+}
+
+.cards-container .right-card{
+  display: inline-block;
+  justify-content: right;
+  padding: 0px 20px 20px 20px;
+  font-size: 1.1rem;
+}
+
+.medical-records-title{
+  display: inline-block;
+  justify-self: left;
+}
+
+.medical-records-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.medical-record-box {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.medical-record-box h3 {
+  margin-bottom: 2px;
+  color: #000000;
+}
+
+.medical-record-box ul {
+  list-style: disc;
+  margin-left: 20px;
+  margin-top: 2px;
+}
+
+.medical-record-box p {
+  margin-bottom: 2px;
+}
+
+.medication-card-container{
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+}
+
+.medication-right-card {
+  display: inline-block;
+  justify-content: right;
+  padding: 0px 20px 20px 20px;
+  font-size: 0.78rem;
+}
+
+.medication-left-card {
+  display: inline-block;
+  justify-content: left;
+  padding: 0px 20px 20px 20px;
+  font-size: 0.9rem;
+}
+
+.medication-head th {
+  border-bottom: #f2f2f2 2px solid;
+  padding: 10px 0;
+}
+
+.medication-head td {
+  padding: 10px 8px;
+}
